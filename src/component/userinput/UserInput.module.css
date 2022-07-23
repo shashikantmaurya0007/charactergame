@@ -1,0 +1,26 @@
+.input_container {
+  display: flex;
+  background-color: blue;
+
+  margin: 6rem auto;
+}
+
+.input_container > input {
+  /* width: 80%; */
+  flex-grow: 1;
+  background-color: var(--input-color);
+  padding-left: 1rem;
+  outline: none;
+  border: 0px;
+}
+.input_container > button {
+  width: 7rem;
+  height: 3rem;
+  background-color: var(--reset-button-color);
+  border: 0px;
+  color: var(--theme-text-color);
+}
+.input_container > button:hover {
+  opacity: 0.8;
+  transition: all 0.2s;
+}

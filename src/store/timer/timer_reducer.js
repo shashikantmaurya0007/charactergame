@@ -9,11 +9,17 @@ const timerReducer = (prevState, { type, payload }) => {
         timerId: payload,
       };
     }
+    case TIMER_ACTION.INITIAL: {
+      return { ...prevState, highestScore: payload };
+    }
     case TIMER_ACTION.INCREASE_TIMER: {
       return { ...prevState, timer: prevState.timer + 1 };
     }
     case TIMER_ACTION.PENALTY_TIMER: {
       return { ...prevState, timer: prevState.timer + 500 };
+    }
+    case TIMER_ACTION.RESET_TIMER: {
+      return { ...prevState, timer: 0, gameStarted: false };
     }
     default: {
       return prevState;

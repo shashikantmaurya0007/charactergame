@@ -7,6 +7,10 @@ const TimeCount = () => {
     milisecondUnitPlace,
     milisecondTenthPlace,
     milisecondHundredPlace,
+    secondHigh,
+    milisecondHundredPlaceHigh,
+    milisecondTenthPlaceHigh,
+    milisecondUnitPlaceHigh,
   } = useTimerHook();
   return (
     <section className={`${styles.timer_container}`}>
@@ -19,7 +23,11 @@ const TimeCount = () => {
         </span>
         s
       </h3>
-      <h3>my best time:0:00s!</h3>
+      <h3>
+        my best time:{secondHigh}:{milisecondHundredPlaceHigh}
+        {milisecondTenthPlaceHigh}
+        {milisecondUnitPlaceHigh}s!
+      </h3>
     </section>
   );
 };

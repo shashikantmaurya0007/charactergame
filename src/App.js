@@ -2,17 +2,29 @@ import "./App.css";
 
 import Header from "./component/header/Header";
 import TimeCount from "./component/TimeCount/TimeCount";
+import UserInput from "./component/userinput/UserInput";
 import WordDisplay from "./component/worddisplay/WordDisplay";
-import { useWord } from "./store/word/word_context";
+import { ToastContainer, toast } from "react-toastify";
 function App() {
-  const {
-    wordState: { word },
-  } = useWord();
   return (
     <div className="App">
       <Header />
       <WordDisplay />
       <TimeCount />
+      <UserInput />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      {/* Same as */}
+      <ToastContainer />
     </div>
   );
 }

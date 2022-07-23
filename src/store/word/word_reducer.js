@@ -8,6 +8,9 @@ const wordReducer = (previousState, { type, payload }) => {
     case WORD_ACTION.INCREMENT_CHARACTER_INDEX: {
       return { ...previousState, wordIndex: previousState.wordIndex + 1 };
     }
+    case WORD_ACTION.RESET: {
+      return { ...previousState, wordIndex: 0 };
+    }
 
     default: {
       return previousState;
