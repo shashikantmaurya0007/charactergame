@@ -1,9 +1,13 @@
 import "./App.css";
 
+import Header from "./component/header/Header";
+import TimeCount from "./component/TimeCount/TimeCount";
 function App() {
   return (
     <div className="App">
-      <h1>hello</h1>
+      <Header />
+
+      <TimeCount />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 import { timerReducer } from "./timer_reducer";
 
 const timerInitialState = {
@@ -7,6 +7,8 @@ const timerInitialState = {
   gameStarted: false,
 };
 const TimerContext = createContext(timerInitialState);
+
+const useTimer = () => useContext(TimerContext);
 const TimerProvider = ({ children }) => {
   const [timerState, timerDispatch] = useReducer(
     timerReducer,
@@ -19,4 +21,4 @@ const TimerProvider = ({ children }) => {
   );
 };
 
-export { TimerProvider };
+export { TimerProvider, useTimer };

@@ -1,12 +1,12 @@
 import { TIMER_ACTION } from "./timer_action";
 
-const timerReducer = (prevState, { type, action }) => {
+const timerReducer = (prevState, { type, payload }) => {
   switch (type) {
     case TIMER_ACTION.START_TIMER: {
       return {
         ...prevState,
         gameStarted: true,
-        timerId: action.payload,
+        timerId: payload,
       };
     }
     case TIMER_ACTION.INCREASE_TIMER: {

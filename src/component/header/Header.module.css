@@ -1,0 +1,7 @@
+.app_header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  color: var(--theme-text-color);
+}
