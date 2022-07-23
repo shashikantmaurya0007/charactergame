@@ -39,6 +39,7 @@ const UserInput = () => {
 
       if (success) {
         localStorage.setItem("highestScore", timer);
+        timerDispatch({ type: TIMER_ACTION.INITIAL, payload: timer });
       }
     }
   };

@@ -10,7 +10,7 @@ const WordDisplay = () => {
   const {
     timerState: { highestScore, timer },
   } = useTimer();
-  let success = Boolean(timer < highestScore || highestScore === 0);
+  let success = Boolean(timer <= highestScore || highestScore === 0);
   let failure = Boolean(timer > highestScore && highestScore !== 0);
   return (
     <>
