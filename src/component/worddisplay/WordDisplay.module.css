@@ -1,0 +1,13 @@
+.word_card {
+  color: var(--theme-text-color);
+  font-size: 3rem;
+  font-weight: bolder;
+  background-color: var(--theme-text-color);
+  width: 90%;
+  color: green;
+  border-radius: 1rem;
+  padding: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  margin: 1rem auto;
+}
